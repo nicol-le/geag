@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Pragas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Pragas</h1>
+    <form id="pragaForm">
+      <div class="form-group">
+        <label for="numeroPlanta">Número da Planta</label>
+        <input type="number" id="numeroPlanta" disabled>
+      </div>
+      <div class="form-group">
+        <label for="nomePraga">Nome da Praga</label>
+        <input type="text" id="nomePraga" placeholder="Ex.: Lagarta-do-cartucho" required>
+      </div>
+      <div class="form-group">
+        <label for="quantidade">Quantidade</label>
+        <input type="number" id="quantidade" min="1" required>
+      </div>
+           
+      <button type="submit">Adicionar Praga</button>
+    </form>
+    <button id="proximaPlanta">Próxima Planta</button>
+    <button id="exportarExcel">Exportar para Excel</button>
+    <table id="pragaTable">
+      <thead>
+       
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
